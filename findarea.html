@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Math Adda </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Dosis|Indie+Flower|Lobster|Permanent+Marker|Poiret+One|Rajdhani|Saira+Condensed:500|Sedgwick+Ave+Display" rel="stylesheet">
+	</head>
+	<body class="a">
+		<div id="header">
+			<nav id="menu">
+				<ul>
+					<li>
+						<a href="index.html">
+							Home
+						</a>
+					</li>
+					|
+					<li>
+						<div class="dropdown">
+							<a href="#">
+								Calculators Program
+							</a>
+							<div class="dropdown-content">
+								<a href="tableprint.html">
+									Table Print
+								</a>
+								<a href="findarea.html">
+									Finding Area
+								</a>
+								<a href="oddeven.html">
+									Odd Even Numbers
+								</a>
+							</div>
+						</div>
+					</li>
+					|
+					<li>
+						<a href="contactus.html">
+							FeedBack
+						</a>
+					</li>
+					|
+					<li>
+						<a href="aboutus.html">
+							About Us
+						</a>
+					</li>
+					|
+					
+				</ul>
+			</nav>
+			<img id=image src="images/logo.png">
+		</div>
+		<div class="section">
+			<article>
+				<h3> Finding Area of Calculation For Square, Equilateral Triangle And Circle </h3>
+				<form action="" method="post">
+					<p>
+						<select id="dropoption">
+							<option value="">SELECT </option>
+							<option  value="1" >Square</option>
+							<option  value="2" >Equilateral Triangle</option>
+							<option  value="3" >Circle</option>
+						</select></p>
+					<p>Enter The Side Value : </p>
+					<p><input type='number' onchange="myarea()" step="0.01" id="sidenumber" min="0.01" max="100" maxlength="3" value="" /></p>
+					<!--<p><input type="button" name="submit" value="Calculate" onclick="area()"
+					/></p>-->
+				</form>
+				<p>
+					<button type="button" onclick="myarea()" >
+						Calculate
+					</button></p>
+				<div id="result" class="result"></div>
+			</article>
+		</div>
+		<div id=footer>
+			<a href="https://www.google.com/search?q=instagram&rlz=1C1GCEA_enCA852CA852&oq=instagram&aqs=chrome..69i57j0l5.5896j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+				<i style="font-size:24px" class="fa">
+					&#xf16d;
+				</i>
+			</a>
+			<a href="#" target="_blank">
+				<i style="font-size:24px" class="fa">
+					&#xf082;
+				</i>
+			</a>
+			<a href="#" target="_blank">
+				<i style="font-size:24px" class="fa fa-pinterest-square" >
+				</i>
+			</a>
+		</div>
+		<script type="text/javascript">
+            function myarea() {
+                var option1 = document.getElementById("dropoption").value;
+                var side = document.getElementById("sidenumber").value;
+                //console.log(side);
+                try {
+                    if (option1 == '' && side == '') {
+                        alert("Please Enter Value");
+                    } else {
+                        if (option1 == 1) {
+                            area = side * side;
+                            result = "<h4>Area of Square</h4> ";
+                            result += "<p>Side * Side = " + side + " * " + side + "=" + area + "</p>";
+                         }
+                        if (option1 == 2) {
+                            area = 0.43301 * (side * side);
+                            result = "<h4>Area of Equilateral Triangle</h4> ";
+                            result += "<p> &#8730;3/4 Side<sup>2</sup> = &#8730;3/4  ( "+side+" * "+side+" ) = "+area+"</p>";
+                        }
+                        if (option1 == 3) {
+                            area = 3.14 * (side * side);
+                            result = "<h4>Area of Circle</h4> ";
+                            result += "<p> &pi;  Raduis<sup>2</sup> = 3.14 * ( "+side+" * "+side+" ) = "+area+"</p>";
+                        }
+                        document.getElementById("result").innerHTML = "";
+                        document.getElementById("result").innerHTML = result;
+                    }
+                } catch(err) {
+                }
+            }      
+		</script>
+	</body>
+</html>

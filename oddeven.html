@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Odd Even </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Dosis|Indie+Flower|Lobster|Permanent+Marker|Poiret+One|Rajdhani|Saira+Condensed:500|Sedgwick+Ave+Display" rel="stylesheet">
+		<style></style>
+	</head>
+	<body class="a">
+		<div id="header">
+			<nav id="menu">
+				<ul>
+					<li>
+						<a href="index.html">
+							Home</a>
+					</li>
+					|
+					<li>
+						<div class="dropdown">
+							<a href="#">
+								Calculators Program</a>
+							<div class="dropdown-content">
+								<a href="tableprint.html">
+									Table Print</a>
+								<a href="findarea.html">
+									Finding Area</a>
+								<a href="oddeven.html">
+									Odd Even Numbers</a>
+							</div>
+						</div>
+					</li>
+					|
+					<li>
+						<a href="contactus.html">
+							FeedBack</a>
+					</li>
+					|
+					<li>
+						<a href="aboutus.html">
+							About Us</a>
+					</li>
+					|
+					
+				</ul>
+			</nav>
+			<img id=image src="images/logo.png">
+		</div>
+		<div class="section">
+			<article>
+				<h3> Print Range of Odd Even Numbers </h3>
+				<form method="post">
+					<p>
+						<strong>
+							Enter The Starting Numbers :
+						</strong><input type="number" id="startnumber" maxlength="4"  min="1" max="1000" required  /></p>
+					<p>
+						<strong>
+							Enter The End Numbers :
+						</strong><input type="number" id="endnumber" maxlength="4"  min="1" max="1000" required /></p>
+					<p>
+						<select id="option" required>
+							<option value="0">Select Option in Odd or Even</option>
+							<option value="1"  >EVEN</option>
+							<option value="2" >ODD</option>
+						</select></p>
+					<p>
+						<button type="button" onclick="printtable()">
+							Genrate Numbers
+						</button></p>
+				</form>
+				<div id="result" class="result"></div>
+			</article>
+		</div>
+		<div id=footer>
+			<a href="https://www.google.com/search?q=instagram&rlz=1C1GCEA_enCA852CA852&oq=instagram&aqs=chrome..69i57j0l5.5896j0j7&sourceid=chrome&ie=UTF-8" target="_blank"><i style="font-size:24px" class="fa">
+					&#xf16d;</i></a>
+			<a href="#" target="_blank">
+				<i style="font-size:24px" class="fa">
+					&#xf082;</i>
+			</a>
+			<a href="#" target="_blank">
+				<i style="font-size:24px" class="fa fa-pinterest-square" >
+				</i>
+			</a>
+		</div>
+		<script type="text/javascript">
+            function printtable() {
+                var end=start=option =0;
+                option = document.getElementById("option").value;
+                starting = document.getElementById("startnumber").value;
+                end = document.getElementById("endnumber").value;
+console.log(option);
+                try {
+                     if (starting == '' || end == '') {
+                        alert("Please Enter Value");
+                    } else if(option == 0){
+                       alert("Please Select Option ");
+                    } else if(starting>end){
+                        alert("Starting is Less Than End ");
+                    }else {
+                        var result="";
+                        result += (option == 1)? "<h3>EVEN Range From start to end </h3>" : "";
+                        result += (option == 2)? "<h3>ODD Range From start to end </h3>" : "";
+                        result += "<p class=\"longword\">";
+                        for (var number = starting; number <= end; number++) {
+                            var nums = ""+number+",";
+                            result += (number % 2 == 0)? ((option == 1)? nums: "") : ((option == 2)? nums : "");
+                        }
+                        //console.log(result);
+                        var len = result.length; 
+                        result = result.substr(0,len-1); //Remove Last Coma
+                        result += ".</p>";
+                        document.getElementById("result").innerHTML = result;
+                    }
+                } catch(err) {
+                }
+            }
+		</script>
+	</body>
+</html>

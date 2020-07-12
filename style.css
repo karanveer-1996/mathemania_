@@ -1,0 +1,295 @@
+#header { 
+ max-width:100%;
+ max-height: 600px; 
+ margin: -1px left; 
+ background: linear-gradient(to top, #000 0%, #495050 70%); 
+ text-align: center; 
+ padding: 5px; 
+ font-family: 'Saira Condensed', sans-serif; 
+    display: flex;
+} 
+ 
+#footer{ 
+      display: block;
+    height: 25px;
+    margin: 0px auto;
+    background: linear-gradient(to top, #000 0%, #495050 100%);
+    text-align: left;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    max-width: 100%;
+    width: 100%
+} 
+
+
+
+#pic1:hover{
+    filter: grayscale(100%);
+    border-radius: 20px;
+    filter:brightness(180%);
+}
+
+#pic2:hover{
+    filter: blur(8px);
+    border-radius: 20px;
+}
+#image
+{    
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-left: 830px;
+}
+#img1{
+    height: 100px;
+    width: 100px;
+}
+#pic3:hover{
+    filter: grayscale(100%);
+    border-radius: 20px;
+}
+ 
+article{ 
+    background-image: url('https://img2.cgtrader.com/items/312736/46f24eacb6/9-low-res-spaceships-3d-model-low-poly-max.jpg'); 
+    background-attachment: fixed; 
+    width:70%; 
+    height:auto; 
+    padding:.5em; 
+    margin: 3px; 
+    
+    border-radius:5px; 
+    float:center; 
+    margin-left:15%; 
+    margin-right:15%; 
+} 
+ 
+#menu { 
+    height: 30px; 
+    font-size: 1.5em; 
+    color: white; 
+} 
+ 
+ul { 
+    float: center; 
+    text-align:left; 
+    margin-left:-15px; 
+    list-style:none; 
+} 
+ 
+#menu ul li{ 
+    text-decoration:none; 
+    display:inline; 
+    padding-right:1em; 
+} 
+ 
+#menu a:visited { 
+    color: #c4b7a6; 
+    background-color: transparent; 
+    text-decoration: none; 
+} 
+ 
+/*DROPDOWN MENU*/ 
+ 
+/* 
+If you wanna add a button on your dropdown menu, use this: 
+.dropbtn { 
+    background: none; 
+    padding: 2px; 
+    font-size: 1.5em; 
+    border: none; 
+    cursor: pointer; 
+} */ 
+ 
+.dropdown{ 
+    position: relative; 
+    display: inline-block; 
+} 
+ 
+.dropdown-content { 
+    display: none; 
+    position: absolute; 
+    min-width: 100%; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1); 
+    z-index: 1; 
+    font-size:20px; 
+    background-color: rgba(50,50,50,2); 
+    overflow: auto; 
+} 
+ 
+.dropdown:hover .dropdown-content { 
+    display: block; 
+} 
+ 
+.dropdown-content a { 
+    color: #c4b7a6; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+} 
+ 
+.dropdown:hover .dropbtn{ 
+    background-color: rgba(100,100,100,1); 
+} 
+ 
+/*end dropdown */ 
+ 
+body{
+    margin: 0px;
+    font-family: 'Handlee', cursive;
+    font-size: 13pt;
+}
+ 
+#home { 
+    font-family: 'Poiret One', cursive; 
+    text-align: left; 
+    float: center; 
+    color: white; 
+} 
+     
+p, h1.header { 
+ color: black; 
+} 
+ 
+a:link { 
+    color: #fff;  
+    background-color: transparent;  
+    text-decoration: none; 
+} 
+ 
+a:visited { 
+    color: #c4b7a6; 
+    background-color: transparent; 
+    text-decoration: none; 
+} 
+ 
+a:hover { 
+    color: #2f4f4f; 
+    background-color: transparent; 
+    text-decoration: none; 
+} 
+ 
+a:active { 
+    color: black; 
+    background-color: transparent; 
+    text-decoration: none; 
+} 
+ 
+img.header { 
+    float: left; 
+    max-width: 20%; 
+    max-height: 20%; 
+    background: linear-gradient(to top, #495050 0%, #000 100%); 
+} 
+ 
+/* GEEK PAGE */ 
+ 
+body.b { 
+    background: linear-gradient(to top, #000 25%, #1007AE 100%);     
+} 
+ 
+#game { 
+    font-family: 'Rajdhani', sans-serif; 
+    text-align: left; 
+    float: center; 
+    color: white; 
+} 
+ 
+/* CONTATOS */ 
+ 
+#contato { 
+    font-family: 'Cinzel', serif; 
+     
+} 
+ 
+#btn-group .button { 
+    background-color: #1c1c1c; /* Green */ 
+    border: none; 
+    color: white; 
+    padding: 10px 25px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer; 
+    float: left; 
+} 
+ 
+#btn-group .button:hover { 
+    background-color: #a9a9a9; 
+    border-radius: 5px; 
+}
+
+h1 {
+    font-size: 15pt;
+    color: #000000;
+    text-align: center;
+    padding: 18px 0 18px 0;
+    margin: 0 0 10px 0;
+}
+h1 span {
+    border: 4px dashed #FFDAB9;
+    padding: 10px;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color:#bff9d1;
+    height: 600px;
+}
+
+/*
+#picX{
+    height: 250px;
+    width: 250px;
+    margin-left: 10px;
+    margin-top: 900px;
+}
+*/
+
+form {
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: #3bf900;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFDAB9;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #7607b9;
+}
+textarea {
+    height: 100px;
+}
+input, textarea,select {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #000;
+    background-color: #eef9ee;
+    color: #000;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    body{
+        background-color: bisque;
+    }
+    /*p{
+        color: rebeccapurple;font-family: fantasy;
+    }*/
+}
